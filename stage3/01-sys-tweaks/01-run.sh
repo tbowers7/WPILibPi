@@ -48,7 +48,7 @@ wget -nc -nv -O contrib-4.8.0.tar.gz \
 
 # allwpilib
 wget -nc -nv -O allwpilib.tar.gz \
-    https://github.com/wpilibsuite/allwpilib/archive/v2024.1.1.tar.gz
+    https://github.com/wpilibsuite/allwpilib/archive/v2024.3.1.tar.gz
 
 ## robotpy-build
 #wget -nc -nv -O robotpy-build.tar.gz \
@@ -270,7 +270,7 @@ sed -i -e 's, -L/pi-gen[^ ]*,,g' "${ROOTFS_DIR}/usr/local/frc-static/lib/pkgconf
 popd
 
 ROBOTPY_REPO=https://frcmaven.wpi.edu/api/download/wpilib-python-release-2024
-ROBOTPY_VERSION=2024.1.1.0
+ROBOTPY_VERSION=2024.3.1.0
 ROBOTPY_ARCH=aarch64
 
 on_chroot << EOF
