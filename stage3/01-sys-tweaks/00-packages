@@ -9,6 +9,7 @@ python3.11-dev
 python3-distutils
 python3-jinja2
 python3-numpy
+python3-scipy
 python3-pip
 libedgetpu1-std
 libedgetpu-dev

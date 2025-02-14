@@ -240,7 +240,7 @@ export LOCALE_DEFAULT="${LOCALE_DEFAULT:-en_GB.UTF-8}"
 export KEYBOARD_KEYMAP="${KEYBOARD_KEYMAP:-gb}"
 export KEYBOARD_LAYOUT="${KEYBOARD_LAYOUT:-English (UK)}"
 
-export TIMEZONE_DEFAULT="${TIMEZONE_DEFAULT:-Europe/London}"
+export TIMEZONE_DEFAULT="${TIMEZONE_DEFAULT:-America/Phoenix}"
 
 export GIT_HASH=${GIT_HASH:-"$(git rev-parse HEAD)"}
 

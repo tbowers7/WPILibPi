@@ -185,7 +185,7 @@ The following environment variables are supported:
    keyboard-configuration` and look at the
    `keyboard-configuration/variant` value.
 
- * `TIMEZONE_DEFAULT` (Default: "Europe/London" )
+ * `TIMEZONE_DEFAULT` (Default: "America/Phoenix" )
 
    Default keyboard layout.
 

@@ -48,7 +48,7 @@ wget -nc -nv -O contrib-4.8.0.tar.gz \
 
 # allwpilib
 wget -nc -nv -O allwpilib.tar.gz \
-    https://github.com/wpilibsuite/allwpilib/archive/v2024.3.1.tar.gz
+    https://github.com/wpilibsuite/allwpilib/archive/v2025.3.1.tar.gz
 
 ## robotpy-build
 #wget -nc -nv -O robotpy-build.tar.gz \
@@ -269,8 +269,8 @@ sed -i -e 's, -L/pi-gen[^ ]*,,g' "${ROOTFS_DIR}/usr/local/frc-static/lib/pkgconf
 
 popd
 
-ROBOTPY_REPO=https://frcmaven.wpi.edu/api/download/wpilib-python-release-2024
-ROBOTPY_VERSION=2024.3.1.0
+ROBOTPY_REPO=https://frcmaven.wpi.edu/api/download/wpilib-python-release-2025
+ROBOTPY_VERSION=2025.3.1.0
 ROBOTPY_ARCH=aarch64
 
 on_chroot << EOF
@@ -281,6 +281,17 @@ pip3 install --break-system-packages ${ROBOTPY_REPO}/robotpy-cscore/${ROBOTPY_VE
 pip3 install --break-system-packages ${ROBOTPY_REPO}/robotpy-wpimath/${ROBOTPY_VERSION}/robotpy_wpimath-${ROBOTPY_VERSION}-cp311-cp311-linux_${ROBOTPY_ARCH}.whl
 pip3 install --break-system-packages ${ROBOTPY_REPO}/robotpy-apriltag/${ROBOTPY_VERSION}/robotpy_apriltag-${ROBOTPY_VERSION}-cp311-cp311-linux_${ROBOTPY_ARCH}.whl
 EOF
+
+
+#
+# Add Adafruit libraries needed for PiHUD
+# 
+on_chroot << EOF
+pip3 install --break-system-packages adafruit-circuitpython-ssd1327 
+pip3 install --break-system-packages adafruit-circuitpython-aw9523 
+pip3 install --break-system-packages adafruit-circuitpython-ht16k33 
+EOF
+
 
 #
 # Build pixy2
